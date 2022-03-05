@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "app",
+    "slug": "app",
+    "version": "1.0.0",
+    "splash": {
+      "image": "./assets/spash.png",
+      "backgroundColor": "#00afad"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
