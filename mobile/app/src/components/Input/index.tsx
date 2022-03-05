@@ -1,6 +1,6 @@
 import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
-import { TextInputProps } from 'react-native';
+import { Keyboard, TextInputProps } from 'react-native';
 
 import { Container, TextInput } from './styles';
 
@@ -12,7 +12,11 @@ interface IInputProps extends TextInputProps {
 export function Input({ placeholder, icon, ...rest }: IInputProps) {
   return (
     <Container>
-      <TextInput placeholder={placeholder} {...rest} />
+      <TextInput
+        keyboardType="web-search"
+        placeholder={placeholder}
+        {...rest}
+      />
       <MaterialIcons name={icon} size={24} color="#212529" />
     </Container>
   );

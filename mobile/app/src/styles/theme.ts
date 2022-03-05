@@ -6,7 +6,8 @@ export default {
     orange: '#f26522',
     yellow: '#fcaf17',
     white: '#fff',
-    black: '#212519',
+    black: '#212529',
+    gray: '#ccc',
   },
   fonts: {
     // primary_400: 'Inter_400Regular',
