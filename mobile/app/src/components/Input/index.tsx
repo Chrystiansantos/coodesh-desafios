@@ -1,6 +1,6 @@
 import React from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Keyboard, TextInputProps } from 'react-native';
+import { TextInputProps } from 'react-native';
 
 import { Container, TextInput } from './styles';
 

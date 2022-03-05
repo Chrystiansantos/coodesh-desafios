@@ -1,12 +1,16 @@
 import React from 'react';
 import { Feather } from '@expo/vector-icons';
 
-import { Container } from './styles';
+import { Container, Photo } from './styles';
 
-export function PhotoUser() {
+interface IPhotoUserProps {
+  uri?: string;
+}
+
+export function PhotoUser({ uri }: IPhotoUserProps) {
   return (
     <Container>
-      <Feather name="user" size={40} />
+      {uri ? <Photo source={{ uri }} /> : <Feather name="user" size={40} />}
     </Container>
   );
 }
