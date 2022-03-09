@@ -3,9 +3,9 @@ export interface IUser {
   photo: string;
   name: string;
   email: string;
-  sex: string;
+  sex: 'female' | 'male';
   birthDate: string;
   phone: string;
-  nacionalidade: string;
+  nationality: string;
   address: string;
 }

@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { FlatList } from 'react-native';
+import { IUser } from '../../dtos/IUserDTO';
 
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.blue_001};
@@ -11,11 +13,13 @@ export const CardBox = styled.View`
   margin: 40px 10px;
 `;
 
-export const List = styled.FlatList.attrs({
+export const List: new <T extends IUser>() => FlatList<T> = styled(
+  FlatList,
+).attrs({
   showsVerticalScrollIndicator: false,
 })`
   margin-bottom: ${getBottomSpace() + 220}px;
-`;
+` as any;
 
 export const FooterHome = styled.View`
   position: absolute;

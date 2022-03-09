@@ -1,5 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import 'intl';
+import 'intl/locale-data/jsonp/pt-BR';
+
+import { StatusBar } from 'expo-status-bar';
 import { ThemeProvider } from 'styled-components';
 import { Home } from './src/Pages/Home';
 import theme from './src/styles/theme';

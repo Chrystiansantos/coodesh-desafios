@@ -32,10 +32,6 @@ export function ModalComponent({
   user,
   ...rest
 }: IModalComponentsProps) {
-  /*
-  address: string;
-  */
-
   return (
     <Modal
       animationType="fade"
@@ -47,7 +43,7 @@ export function ModalComponent({
       <Container>
         <Content>
           <BoxPhoto>
-            <PhotoUser uri="https://avatars.githubusercontent.com/u/33062949?v=4" />
+            <PhotoUser uri={user.photo} />
           </BoxPhoto>
           <CloseModal>
             <Button onPress={() => changeStatusModal(false)}>
@@ -55,28 +51,28 @@ export function ModalComponent({
             </Button>
           </CloseModal>
           <Header>
-            <Title>Chrystian Santos</Title>
+            <Title>{user.name}</Title>
             <NationalitySexBox>
-              <Nationality>Brasileiro</Nationality>
+              <Nationality>{user.nationality}</Nationality>
               {/* <FontAwesome name="female" size={24} color="black" /> */}
-              <FontAwesome name="male" size={24} color="black" />
+              <FontAwesome name={user.sex} size={24} color="black" />
             </NationalitySexBox>
           </Header>
           <BoxContent>
             <MaterialIcons name="email" size={30} color="black" />
-            <TextBoxContent>Chrystian_Santos_Silva@hotmail.com</TextBoxContent>
+            <TextBoxContent>{user.email}</TextBoxContent>
           </BoxContent>
           <BoxContent>
             <Entypo name="address" size={24} color="black" />
-            <TextBoxContent>Rua 27, numero 302 Iguatama - MG</TextBoxContent>
+            <TextBoxContent>{user.address}</TextBoxContent>
           </BoxContent>
           <BoxContent>
             <MaterialIcons name={iconPhone} size={30} color="black" />
-            <TextBoxContent>(62) 9 8130-5602</TextBoxContent>
+            <TextBoxContent>{user.phone}</TextBoxContent>
           </BoxContent>
           <BoxContent>
             <FontAwesome name="calendar" size={30} color="black" />
-            <TextBoxContent>07/04/1998</TextBoxContent>
+            <TextBoxContent>{user.birthDate}</TextBoxContent>
           </BoxContent>
         </Content>
       </Container>

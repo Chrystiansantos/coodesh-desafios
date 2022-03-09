@@ -1,4 +1,5 @@
 import React from 'react';
+import { IUser } from '../../dtos/IUserDTO';
 
 import {
   Container,
@@ -10,16 +11,20 @@ import {
   BirthDate,
 } from './styles';
 
-export function UserDescription() {
+interface IUserDescriptionProps {
+  data: IUser;
+}
+
+export function UserDescription({ data }: IUserDescriptionProps) {
   return (
     <Container>
       <BoxTitle>
-        <Name>Chrystian Santos</Name>
-        <PhoneNumber>(62) 9 8130-5602</PhoneNumber>
+        <Name>{data.name}</Name>
+        <PhoneNumber>{data.phone}</PhoneNumber>
       </BoxTitle>
       <BoxSubtitle>
-        <Sex>Masculino</Sex>
-        <BirthDate>07/04/1998</BirthDate>
+        <Sex>{data.sex}</Sex>
+        <BirthDate>{data.birthDate}</BirthDate>
       </BoxSubtitle>
     </Container>
   );

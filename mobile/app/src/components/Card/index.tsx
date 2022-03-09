@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { IUser } from '../../dtos/IUserDTO';
 import { PhotoUser } from '../PhotoUser';
 import { UserDescription } from '../UserDescription';
@@ -11,7 +11,7 @@ interface ICardProps {
   selectUser: (data: IUser) => void;
 }
 
-export function Card({ data, openModal, selectUser }: ICardProps) {
+function CardComponent({ data, openModal, selectUser }: ICardProps) {
   function showModal() {
     openModal(true);
     selectUser(data);
@@ -19,8 +19,12 @@ export function Card({ data, openModal, selectUser }: ICardProps) {
   return (
     // eslint-disable-next-line react/jsx-no-bind
     <Container onPress={showModal} activeOpacity={0.7}>
-      <PhotoUser />
-      <UserDescription />
+      <PhotoUser uri={data.photo} />
+      <UserDescription data={data} />
     </Container>
   );
 }
+
+export const Card = memo(CardComponent, (prevProps, nextProps) =>
+  Object.is(prevProps.data, nextProps.data),
+);
