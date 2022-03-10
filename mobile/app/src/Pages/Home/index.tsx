@@ -83,7 +83,9 @@ export function Home() {
 
   useEffect(() => {
     if (search) {
-      const userListFilter = userList.filter(el => el.name.includes(search));
+      const userListFilter = userList.filter(el =>
+        el.nationality.includes(search),
+      );
       setUserListRender(userListFilter);
       return;
     }
