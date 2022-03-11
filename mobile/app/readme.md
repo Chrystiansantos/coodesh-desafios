@@ -27,9 +27,8 @@ Após a instalacão voce podera executar utilizando o seguinte comando:
 ```
 Após a execucao do projeto podera ver as seguintes telas abaixo:
 
-<!-- ![Group 1](https://user-images.githubusercontent.com/33062949/157704234-2a0b22e6-2d61-4649-8a6d-7cf85d9de7ee.png) -->
 
-<img src="https://user-images.githubusercontent.com/33062949/157704234-2a0b22e6-2d61-4649-8a6d-7cf85d9de7ee.png" width="1200" height="800" />
+<img src="https://user-images.githubusercontent.com/33062949/157777503-2eec6c2e-321e-4bbd-b805-c851d1a84254.png" width="1200" height="800" />
 <br>
 <br>
 <a href="https://lab.coodesh.com/public-challenges/mobile-challenge-2021">Challenge by coodesh</a>

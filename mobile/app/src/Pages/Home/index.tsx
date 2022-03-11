@@ -72,7 +72,6 @@ export function Home() {
       setUserList(arrayFormated);
       setUserListRender(arrayFormated);
     } catch (error) {
-      console.log(error);
       Alert.alert('Ocorreu um erro tento novamente 🙂');
     }
   }
@@ -147,7 +146,7 @@ export function Home() {
           keyExtractor={item => String(item.id)}
           ListFooterComponent={!search && <Loading />}
           // eslint-disable-next-line react/jsx-no-bind
-          // onEndReached={nextPage}
+          onEndReached={nextPage}
         />
       </CardBox>
       <FooterHome>
